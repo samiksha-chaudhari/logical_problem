@@ -1,12 +1,17 @@
 ﻿using System;
-
-namespace logical_problem
+public class Reverse
 {
-    class Program
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
+        int reverse = 0, rem;
+        Console.Write("Enter a number: ");
+        int n = int.Parse(Console.ReadLine());
+        while (n != 0)
         {
-            Console.WriteLine("logical problems");
+            rem = n % 10;
+            reverse = reverse * 10 + rem;
+            n /= 10;
         }
+        Console.Write("Reversed Number: " + reverse);
     }
 }
